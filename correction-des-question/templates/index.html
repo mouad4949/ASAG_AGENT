@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>تصحيح إجابة الطالب</title>
+</head>
+<body style="font-family: Arial; padding: 30px; background: #f8f8f8;">
+    <h1>✏️ تصحيح إجابة الطالب باستخدام LLM</h1>
+    <form method="POST">
+        <label>📘 النص:</label><br>
+        <textarea name="texte" rows="5" cols="80" required></textarea><br><br>
+
+        <label>❓ السؤال:</label><br>
+        <input name="question" type="text" size="80" required><br><br>
+
+        <label>🧑‍🎓 إجابة الطالب:</label><br>
+        <textarea name="reponse" rows="3" cols="80" required></textarea><br><br>
+
+        <button type="submit">تصحيح ✨</button>
+    </form>
+
+    {% if result %}
+    <hr>
+    <h2>✅ نتيجة التصحيح:</h2>
+    <pre style="background:#fff;padding:15px;border:1px solid #ccc;">{{ result }}</pre>
+    {% endif %}
+</body>
+</html>
